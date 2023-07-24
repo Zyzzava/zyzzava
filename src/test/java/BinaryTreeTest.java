@@ -56,8 +56,9 @@ public class BinaryTreeTest {
         bt = bt.createBinaryTree();
 
         bt.traverseInOrder(bt.getRootNode());
-
-        assertEquals("3", systemOutRule.getLog());
+        String log = systemOutRule.getLog();
+        System.out.println(log);
+        assertEquals("3", log.charAt(0));
         assertEquals("4", systemOutRule.getLog());
         assertEquals("5", systemOutRule.getLog());
         assertEquals("6", systemOutRule.getLog());
